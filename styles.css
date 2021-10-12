@@ -226,3 +226,49 @@ body {
     bottom: 120px;
     width: 100%;
 }
+
+.content{
+    margin: 0px 250px;
+    height: calc(100% - 66px);
+    position: fixed;
+    width: calc(100% - 250px);
+}
+
+.content-welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content-logo{
+    width: 82px;
+    height: 82px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+}
+
+.content-title{
+    margin-bottom: 1rem;
+}
+
+.content-welcome p{
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.create-channel{
+    padding: 10px 10px;
+    background: var(--color-button);
+    color: var(--color-light);
+    border: unset;
+    outline: unset;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 1rem;
+    cursor: pointer;
+}

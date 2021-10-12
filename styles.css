@@ -1,94 +1,228 @@
-:root{
-    --color-dark : #000;
+:root {
+    --color-dark: #000;
     --color-light: #fff;
-    --color-button : #0a8d48;
-    --color-primary : #3F0E40;
-    --color-primary-dark : #401241;
-    --color-icon : gray;
-    --color-secondary : gray;
+    --color-button: #0a8d48;
+    --color-primary: #3F0F3F;
+    --color-primary-dark: #330e34;
+    --color-border: rgb(195, 195, 195, 0.3);
+    --color-secondary: gray;
 }
 
-*{
+* {
     padding: unset;
     margin: unset;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-size: 16px;
     font-style: var(--color-dark);
 }
 
-.header{
+.header {
     background: var(--color-primary-dark);
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 66px;
 }
 
-.header-profile{
-    width: 32px;
-    height: 32px;
+.header-profile {
+    width: 24px;
+    height: 24px;
     object-fit: cover;
-    border-radius: 50%;
 }
 
-.header i{
+.header i {
     color: var(--color-light);
     font-size: 21px;
     opacity: 0.6;
 }
 
-.header-search{
+.header-search {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
-.search{
+.search {
     position: relative;
 }
 
-.search-input{
-    padding: 5px 25px;
+.search-input {
+    padding: 5px 40px;
     background: transparent;
     border: 1px solid var(--color-secondary);
     border-radius: 5px;
     width: 100%;
     font-size: 14px;
+    color: var(--color-light);
 }
 
-.search-form{
+.search-input::placeholder {
+    text-align: center;
+    color: var(--color-light);
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    opacity: 0.6;
+    transition: 0.4s ease;
+}
+
+.search-form {
     width: 40%;
     margin-right: 1.5rem;
 }
 
-.search-placeholder{
-    color: var(--color-light);
-    position: absolute;
-    left: 50%;
-    top: 2.5px;
-    transform: translateX(-50%);
+.search-placeholder {
     opacity: 0.6;
 }
 
-.search-icon{
+.search-icon {
     position: absolute;
     left: 50px;
     top: 6.5px;
-    font-size: 15px!important;
+    font-size: 15px !important;
     opacity: 0.6;
+
 }
 
-.clock{
+.clock {
     margin-right: 1.5rem;
 }
 
-.profile{
+.profile {
     background: var(--color-dark);
     display: flex;
     align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.sidepanel {
+    background: var(--color-primary);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 66px;
+}
+
+.sidepanel-container {
+    position: relative;
+    height: 100%;
+}
+
+.sidepanel-edit {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: var(--color-light);
+    padding: 10px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.channel-title {
+    color: var(--color-light);
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 1rem;
+    margin-bottom: unset;
+    padding-bottom: unset;
+}
+
+.profile-status {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0px 1rem 10px;
+}
+
+.profile-status i {
+    color: var(--color-button);
+    font-size: 9px;
+    border: unset;
+}
+
+.profile-status span {
+    color: var(--color-light);
+    margin-top: 3px;
+    font-size: 13px;
+    opacity: 0.8;
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+.sidepanel-options {
+    padding: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-light);
+    opacity: 0.6;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.sidepanel-options span {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidepanel-options i {
+    width: 10px;
+    text-align: right;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.sidepanel-option-wrapper {
+    padding-bottom: 10px;
+}
+
+.sidepanel-option-wrapper:last-child {
+    padding-bottom: unset;
+}
+
+.option-wrapper {
+    padding: 10px 1rem;
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-light);
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.option-wrapper i{  
+    width: 10px;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+
+}
+
+.option-wrapper span{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#add-channel{
+    padding-left: 25px;
+}
+
+.sidepanel-logout p{
+    text-align: center;
+}
+
+.sidepanel-logout{
+    padding: 7px 0;
+    background: var(--color-primary-dark);
+    color: var(--color-light);
+    font-size: 14px;
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
 }

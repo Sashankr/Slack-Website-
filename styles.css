@@ -225,6 +225,8 @@ body {
     position: absolute;
     bottom: 120px;
     width: 100%;
+    cursor: pointer;
+    transition: 0.4s ease;
 }
 
 .content{
@@ -279,4 +281,10 @@ i.hide-icon{
 
 i.show-icon{
     display: block;
+}
+
+.sidepanel-logout:hover{
+    background: var(--color-light);
+    color: var(--color-primary-dark);
+    opacity: 0.7;
 }

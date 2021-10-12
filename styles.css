@@ -272,3 +272,11 @@ body {
     margin-top: 1rem;
     cursor: pointer;
 }
+
+i.hide-icon{
+    display: none;
+}
+
+i.show-icon{
+    display: block;
+}

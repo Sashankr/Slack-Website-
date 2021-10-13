@@ -310,5 +310,4 @@ i.show-icon{
     border: unset;
     outline: unset;
     border-bottom: 1px solid var(--color-border);
-    margin: 0 2rem;
 }
